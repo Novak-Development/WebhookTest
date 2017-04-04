@@ -35,10 +35,11 @@ def webhook():
     return r
 	
 def lesen():
-	F = open("testfile", "r")
-	text = F.read()
-	
-	return text
+        sock = urllib.urlopen("https://www.bier.de")
+        html = sock.read(15)
+        sock.close()
+        
+        return html
 
 def makeWebhookResult():
 	speech = lesen()
