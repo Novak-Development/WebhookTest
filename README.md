@@ -1,22 +1,16 @@
-# Webhook-and-API.AI-Sample - Echo your text
+# Api.ai - sample webhook implementation in Python
 
-A very simple step by step, 11:06 minutes demo (see video at the end of read me) of implementing an echo service using webhook. Whatever user asks Google Assistant will be sent to your API and then same text will be sent back as speech text.
+This is a really simple webhook implementation that gets Api.ai classification JSON (i.e. a JSON output of Api.ai /query endpoint) and returns a fulfillment response.
 
-This simple app will help you understand
-- How to write an API in node
-- How to integrate your node JS app with API.AI as webhook
+More info about Api.ai webhooks could be found here:
+[Api.ai Webhook](https://docs.api.ai/docs/webhook)
 
 # Deploy to:
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-# How it works?
-- Push this app to Heroku
-- Test the API https://webhook-echo-sample.herokuapp.com/echo - use www.hurl.it to test it
+# What does the service do?
+It's a weather information fulfillment service that uses [Yahoo! Weather API](https://developer.yahoo.com/weather/).
+The services takes the `geo-city` parameter from the action, performs geolocation for the city and requests weather information from Yahoo! Weather public API. 
 
-Open API.AI portal - https://api.ai
-- Create an account and login
+The service packs the result in the Api.ai webhook-compatible response JSON and returns it to Api.ai.
 
-# Video
-Watch this video to learn the steps to create sample application.
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/6TQdwzztltc/0.jpg)](https://www.youtube.com/watch?v=6TQdwzztltc)
