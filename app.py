@@ -33,6 +33,12 @@ def webhook():
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     return r
+	
+def lesen():
+	F = open("testfile", "r")
+	text = F.read()
+	
+	return text
 
 def makeWebhookResult():
 
