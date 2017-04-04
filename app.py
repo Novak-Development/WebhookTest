@@ -41,9 +41,9 @@ def lesen():
 	return text
 
 def makeWebhookResult():
-
+	speech = lesen()
     return {
-        "speech": "CAN DO",
+        "speech": speech,
         "displayText": "some text",
         # "data": data,
         # "contextOut": [],
