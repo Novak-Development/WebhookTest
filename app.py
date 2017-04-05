@@ -35,9 +35,9 @@ def webhook():
     return r
 
 def makeWebhookResult():
-
+	text = "Can Do"
     return {
-        "speech": "CAN DOO",
+        "speech": text,
         "displayText": "some text",
         # "data": data,
         # "contextOut": [],
