@@ -27,3 +27,10 @@ def hello_world(text):
 def generate_text():
     text = str(datetime.datetime.now())
     return text
+	
+if __name__ == '__main__':
+    port = int(os.getenv('PORT', 5000))
+
+    print("Starting app on port %d" % port)
+
+    app.run(debug=False, port=port, host='192.168.245.131')
