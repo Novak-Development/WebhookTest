@@ -31,7 +31,7 @@ def webhook():
 		sock = urllib.urlopen("http://192.168.0.102/temp")
         html = str(sock.read())
         sock.close()
-	except:
+	except Exception:
 		html = "lesen fail"
 
     res = makeWebhookResult(html)
