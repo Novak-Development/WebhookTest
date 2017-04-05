@@ -39,7 +39,7 @@ def lesen():
         html = sock.read(15)
         sock.close()
 		if (html == "")
-			speech = Cant Read
+			speech = "Cant Read"
         return html
 
 def makeWebhookResult():
