@@ -38,7 +38,6 @@ def lesen():
         sock = urllib.urlopen("https://www.bier.de")
         html = sock.read(15)
         sock.close()
-        
         return html
 
 def makeWebhookResult():
