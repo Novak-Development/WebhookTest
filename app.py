@@ -26,10 +26,8 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 	
-	
-	html = "etc" + " " + "test"
 
-    res = makeWebhookResult(html)
+    res = makeWebhookResult("test")
 
     res = json.dumps(res, indent=4)
     # print(res)
