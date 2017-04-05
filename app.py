@@ -26,7 +26,7 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    res = makeWebhookResult()
+    res = makeWebhookResult("testtest")
 
     res = json.dumps(res, indent=4)
     # print(res)
@@ -34,9 +34,9 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
-def makeWebhookResult():
+def makeWebhookResult(text):
     return {
-        "speech": "stuff",
+        "speech": text,
         "displayText": "some text",
         # "data": data,
         # "contextOut": [],
