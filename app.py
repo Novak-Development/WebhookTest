@@ -35,12 +35,13 @@ def webhook():
     return r
 	
 def lesen():
-        sock = urllib.urlopen("https://www.bier.de")
-        html =  str(sock.read(15))
-        sock.close()
-		if (html == "")
-			speech = "Cant Read"
-        return html
+	try:
+		sock = urllib.urlopen("https://www.bier.de")
+		html =  str(sock.read(15))
+		sock.close()
+	except:
+		html = "Cant Read"
+	return html
 
 def makeWebhookResult():
 	speech = lesen()
