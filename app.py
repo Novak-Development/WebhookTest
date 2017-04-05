@@ -27,12 +27,7 @@ def webhook():
     print(json.dumps(req, indent=4))
 	
 	
-	try:
-		sock = urllib.urlopen("http://192.168.0.102/temp")
-        html = str(sock.read())
-        sock.close()
-	except Exception:
-		html = "lesen fail"
+	html = "etc" + " " + "test"
 
     res = makeWebhookResult(html)
 
