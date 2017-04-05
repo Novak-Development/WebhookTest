@@ -34,6 +34,20 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 	
+
+
+def makeWebhookResult():
+	speech = lesen()
+	if(speech == "")
+		speech = "test"
+    return {
+        "speech": speech,
+        "displayText": "some text",
+        # "data": data,
+        # "contextOut": [],
+        "source": "apiai-weather-webhook-sample"
+    }
+
 def lesen():
 	try:
 		sock = urllib.urlopen("https://www.bier.de")
@@ -42,17 +56,6 @@ def lesen():
 	except:
 		html = "Cant Read"
 	return html
-
-def makeWebhookResult():
-	speech = lesen()
-    return {
-        "speech": "lul",
-        "displayText": "some text",
-        # "data": data,
-        # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
-    }
-
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
